@@ -148,14 +148,15 @@ Due to the lack of a Docker environment, automation is handled via **Windows Tas
 
 ## Power BI Dashboard
 
-Consists of 4 pages:
+Consists of 5 pages:
 
 1. **Overview** — KPI cards, property type breakdown, top districts
-2. **District Analysis** — price comparisons, scatter plot (price/area/count), slicers
-3. **Property Details** — price by room count, repair/mortgage filters
-4. **Anomalies & Risk** — table sorted by risk score, KPI cards (deal/overpriced/duplicate/bot counts), conditional formatting (heatmap), outlier scatter chart, drill-through detail page
+2. **Price Analysis** — price distribution (histogram), price by room count, price vs. area scatter plot with trend line, price/m² comparisons
+3. **Geographic Analysis** — district-level price comparisons, scatter plot (price/area/listing count by district), district slicers
+4. **Anomalies & Risk** — table sorted by risk score, KPI cards (deal/overpriced/duplicate/bot counts), conditional formatting (heatmap), outlier scatter chart
+5. **Detail** — drill-through page showing full listing-level data for any selected data point
 
-Data source: `data_lake/gold/*.parquet` (direct file connection, updated via "Refresh").
+Data source: `data_lake/gold/listings_enriched.parquet`.
 
 ---
 
